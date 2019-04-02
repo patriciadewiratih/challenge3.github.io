@@ -107,5 +107,5 @@ getAPIdataNASA();
 
 
 function change(){
-	document.body.style.color = 'red';
+	document.body.style.color = 'blue';
 }
