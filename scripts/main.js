@@ -1,4 +1,6 @@
 var units = "&units=metric"
+var measure = " °C";
+
 function getAPIdataID() {
 
 	// construct request
@@ -21,7 +23,7 @@ function getAPIdataID() {
         console.log(nameID, descID, tempID);
 
         document.getElementById('nameID').innerHTML = nameID;
-        document.getElementById('tempID').innerHTML = tempID + " °C";
+        document.getElementById('tempID').innerHTML = tempID + measure;
 		document.getElementById('weatherID').innerHTML = descID;
 	})
 
@@ -49,13 +51,17 @@ function getAPIdataNL() {
         console.log(nameNL, descNL, tempNL);
 
         document.getElementById('nameNL').innerHTML = nameNL;
-        document.getElementById('tempNL').innerHTML = tempNL + " °C";
+        document.getElementById('tempNL').innerHTML = tempNL + measure;
 		document.getElementById('weatherNL').innerHTML = descNL;
     })
 
 }
 getAPIdataNL();
 
+function toggle(){
+	measure = " °F";
+	return;
+}
 
 // spaceX
 function getAPIdataSpaceX(){
@@ -99,40 +105,7 @@ function getAPIdataNASA(){
 }
 getAPIdataNASA();
 
-function getAPIdataLocation(){
-	var requestA = "http://api.open-notify.org/iss-now.json";
 
-	fetch(requestA)
-
-	.then(function(responseA){
-		return responseA.json();
-	})
-
-	.then(function(responseA){ 
-		console.log(responseA.iss_position);
-
-		document.getElementById('issLat').innerHTML = "ISS Latitude Position: " + responseA.iss_position.latitude;
-		document.getElementById('issLong').innerHTML = "ISS Longitude Position: " + responseA.iss_position.longitude;
-	})
+function change(){
+	document.body.style.color = 'red';
 }
-getAPIdataLocation();
-
-function getAPIdataLocation(){
-	var requestTM = "https://app.ticketmaster.com/discovery/v2/events?apikey=aBV1Y213YOorMAQDCQ0a3vqWwyy6SwqO&countryCode=US";
-
-	fetch(requestTM)
-
-	.then(function(responseTM){
-		return responseTM.json();
-	})
-
-	.then(function(responseTM){ 
-		var nmevFL = responseTM._embedded.events[0].name;
-		var nmevCh = responseTM._embedded.events[1].name;
-		console.log(nmevFL, nmevCh);
-
-
-		
-	})
-}
-getAPIdataLocation();

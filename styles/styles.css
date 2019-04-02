@@ -10,7 +10,7 @@ body {
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    font-size: 1.25em;
+    font-size: .75em;
     display: inline;
     margin:0;
     background-position: center;
@@ -20,9 +20,12 @@ body {
 p {
     margin:0;
     text-align: justify;
+    font-size: 1.5rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
 }
 header{
-    padding-bottom: 2rem;
+    padding-bottom: 1.5rem;
 }
 h1, header {
     text-align: left;
@@ -32,46 +35,39 @@ h1, header {
 h1{   
     font-size: 3em;
 }
-h2{
-    font-size: 2em;
-    margin:0;
-    padding-bottom: 2rem;
-    text-align: left;
-}
-h3{
-    font-weight: 400;
-    font-size: 1.5em;
-    text-align: left;
-}
-p{
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-}
 .content-wrap {
     max-width: 1040px;
     margin: 0 auto;
-    padding: 6em 5em;
+    padding: 13.33em 5em 6em 5em;
     overflow: auto;
 }
 
-/* table */
-th{
-    font-size: 2.5rem;
+/* link */
+a{
+    text-decoration: underline;
+    transition: 0.3s;
 }
-.temp{
-    font-size: 3rem;
-}
-.layouts{
-    margin-left: 2rem;
+a:hover{
+    text-decoration: none;
+    color: white;
 }
 
-/* overlay */
-#overlay{
-    color: black;
+/* table */
+table{
     width: 100%;
-    height: 100%;
-    top: 0;
-    bottom:0;
+    text-align: left;
+}
+th{
+    font-size: 1.75rem;
+}
+td{
+    font-size: 1.5rem;
+}
+.temp{
+    font-size: 2.5rem;
+}
+.layouts{
+    margin-left: 1.5rem;
 }
 
 /* media queries */
@@ -83,7 +79,7 @@ th{
     .col-wide{
         width: 70%;
         float: left;
-        padding-left: 2.5em;
+        padding-left: 2em;
         }
 }
     @media(max-width: 899px){
@@ -91,11 +87,11 @@ th{
             text-align: center;
         }
         h1{
-            font-size: 3rem;
+            font-size: 2.5rem;
         }
         h2{
             text-align: center;
-            font-size: 2rem;
+            font-size: 1.5rem;
         }
         p {
             text-align: center;
@@ -105,6 +101,6 @@ th{
         }
         .content-wrap{
             text-align: center;
-            padding: 3rem;
+            padding: 2.5rem;
         }
     }
