@@ -1,0 +1,322 @@
+/* color pallete
+red #721817
+yellow #FA9F42
+blue #2B4162
+green #0B6E4F
+gray #E0E0E2 */
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+/* Global style */
+body {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1.25em;
+    display: inline;
+    margin:0;
+}
+h1, h3, p {
+    margin:0;
+    text-align: justify;
+}
+header{
+    padding-bottom: 2rem;
+}
+h1, header {
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+h1{
+    font-size: 3em;
+}
+h2{
+    font-size: 2em;
+    margin:0;
+    padding-bottom: 2rem;
+    text-align: left;
+}
+h3{
+    font-weight: 400;
+    font-size: 1.5em;
+    text-align: left;
+}
+p{
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
+.content-wrap {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 6em 5em;
+    overflow: auto;
+}
+.portfolio .content-wrap{
+    padding:0;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    text-align: center;
+}
+.uppercase{
+    text-transform: uppercase;
+}
+.btn {
+    text-decoration: none;
+    background: #423E37;
+    color: #EDEBD7;
+    padding: 1em;
+    display: inline-block;
+    transition: 0.5s;
+}
+.btn:hover{
+    color:#423E37;
+    background: #E3B23C;
+}
+
+/* header */
+header{
+    background: #6E675F;
+    color: #EDEBD7;
+    padding-top: 70px;
+    position: relative;
+}
+.profile-img{
+    border-radius: 50%;
+    margin-top: 3rem;
+}
+.download{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-weight: 300;
+}
+.emphasis{
+    font-style: italic;
+    text-align: left;
+}
+
+/* footer */
+footer{
+    background: #423E37;
+    color: #EDEBD7;
+    text-align: center;
+}
+footer h2{
+    padding:0;
+    text-align: center;
+}
+footer p{
+    text-align: center;
+}
+
+/* Navigation */
+nav{
+    text-align: right;
+    line-height: 70px;   
+    background: #423E37;
+    position: fixed;
+    width:100%;
+    top:0;
+} 
+nav img{
+    width: 10rem;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+.logo{
+    text-align: left;
+}
+nav a{
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    width: 100%;
+}
+ul{
+    margin-right: 1rem;
+}
+.nav-wrap{
+    margin: 0 auto;
+    padding: 0;
+    overflow: auto;
+}
+.menu{
+    clear: left;
+    margin: 0 30px 0 0;
+    text-align: right;
+    display: none;
+}
+.menu a{
+    text-decoration: none;
+    margin: 0 10px;
+    display:block;
+    text-align: right;
+    color:#EDEBD7;
+    transition:0.5s;
+}
+.menu a:hover{
+    color: #E3B23C;
+}
+label{
+    margin: 0 40px 0 0;
+    font-size: 26px;
+    line-height: 70px;;
+}
+#toggle{
+    display: none;
+}
+#toggle:checked + .menu {
+    display: block;
+    clear: left;
+}
+
+/* work experience*/
+.work {
+    background: #A39594;
+}
+h3 ~ p {
+    margin: 0;
+}
+.job-description{
+    margin-bottom: 1.5em; 
+}
+.job-description p:first-of-type{
+    margin-top: 0;
+}
+
+/* volunteer */
+.volunteer{
+    background: #EDEBD7;
+    text-align: center;
+}
+
+/* education */
+div .education{
+    text-align: center;
+}
+.education{
+    background: #A39594;
+}
+p + h3 {
+    margin-top: 1em;
+}
+/* contact */
+.contact a{
+    margin: 1rem;
+    padding: 1em;
+    text-decoration: none;
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    font-size: 26px;
+    background: #EDEBD7;
+    color: #423E37;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+.contact a:hover{
+    background: #E3B23C;
+}
+.contact a i{
+    transition: 0.5s all;
+}
+.contact a:hover >i{
+    transform: scale(1.6) rotate(25deg);
+}
+.contact a b{
+    transition: 0.5s all;
+}
+.contact a:hover >b{
+    transform: scale(1.6) rotate(-25deg);
+}
+.contact{
+    margin: 2rem;
+    padding:0;
+}
+/* portfolio */
+.img-fluid{
+    max-width: 100%;
+    width: 400px;
+    }
+.img-thumbnail{
+    padding:.25rem;
+    padding-bottom: auto;
+    background-color:#fff;
+    border:1px solid #dee2e6;
+    border-radius:.25rem;
+    max-width: 90%;
+    height:auto;
+    margin: 1rem;
+    transition: 0.5s;
+    }
+.portfolio{
+    background: #6E675F;
+    text-align: center;
+}
+.portfolio h2{
+    text-align: center;
+    color: #EDEBD7;
+}
+.portfolio div{
+    display: inline-block;
+}
+.img-thumbnail:hover{
+    background-color: #E3B23C;
+    border: 0;
+    transform: scale(1.1);
+}
+/* media queries */
+@media (min-width: 900px) {
+    .col-narrow{
+        width: 30%;
+        float: left;
+    }
+    .col-wide{
+        width: 70%;
+        float: left;
+        padding-left: 2.5em;
+    }
+    .post{
+        height:300px;
+        width: auto;
+    }
+}
+    @media(max-width: 899px){
+        header,h1,h3, .emphasis, .uppercase{
+            text-align: center;
+        }
+        h1{
+            font-size: 3rem;
+        }
+        h2{
+            text-align: center;
+            font-size: 2rem;
+        }
+        .volunteer p, .education .emphasis{
+            text-align: center;
+        }
+        header p, .education p {
+            text-align: justify;
+        }
+        .profile-img{
+            width: 300px;
+            text-align: center;
+            margin-top:0;
+            margin-bottom: 2rem;
+        }
+        .content-wrap{
+            text-align: center;
+            padding: 3rem;
+        }
+    }
